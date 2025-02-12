@@ -1,0 +1,139 @@
+#header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2px;
+    background: #121212;
+    overflow: hidden;
+}
+/* button, #add-shortcut { */
+    /* height: 40 px;
+    width: 315px;
+    padding: 10px;
+    background: #252525;
+    border-radius: 6px; */
+    /* display: flex; */
+    /* align-items: center;
+    color: #ffffff;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s; */
+/* } */
+
+/* button:hover, #add-shortcut {
+    background: #303030;
+} */
+
+#app {
+    width: 320px;
+    padding: 15px;
+    background: #181818;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#search, #shortcut-name, #shortcut-url {
+    width: 91%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #232323;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+#shortcut-list {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 6px;
+    background: #202020;
+}
+
+/* Shortcut item (Clickable) */
+.shortcut-item {
+    margin: 6px 0;
+    padding: 10px;
+    background: #252525;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.shortcut-item:hover {
+    background: #303030;
+}
+
+/* Shortcut info (Favicon + Title) */
+.shortcut-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Shortcut Favicon */
+.shortcut-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+/* Shortcut Title */
+.shortcut-title {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* Copy & Delete Icons */
+.shortcut-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.copy-btn, .delete-btn {
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.copy-btn:hover {
+    color: #50c878; /* Light green */
+}
+
+.delete-btn:hover {
+    color: #ff5252; /* Light red */
+}
+
+
