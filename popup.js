@@ -19,7 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Render shortcuts in the UI
     function renderShortcuts(shortcuts) {
       shortcutList.innerHTML = "";
-  
+      if (shortcuts.length === 0) {
+        shortcutList.style.display = "none";
+        searchInput.style.display = "none";
+        return;
+      } else {
+        shortcutList.style.display = "block"; // Show if there are shortcuts
+        searchInput.style.display = "block";
+      }
       shortcuts.forEach((shortcut, index) => {
         const shortcutItem = document.createElement("div");
         shortcutItem.className = "shortcut-item";

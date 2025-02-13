@@ -15,6 +15,12 @@ h1 {
     color: #ffffff;
     margin: 0;
 }
+h2 {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 1;
+    text-align: center;
+}
 
 html, body {
     font-family: Arial, sans-serif;
@@ -23,26 +29,30 @@ html, body {
     background: #121212;
     overflow: hidden;
 }
-/* button, #add-shortcut { */
-    /* height: 40 px;
-    width: 315px;
-    padding: 10px;
-    background: #252525;
-    border-radius: 6px; */
-    /* display: flex; */
-    /* align-items: center;
-    color: #ffffff;
-    justify-content: space-between;
+/* This affects only the "Add Shortcut" button */
+#add-shortcut {
+    background: #232323;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s; */
-/* } */
-
-/* button:hover, #add-shortcut {
+    width: 100%;
+}
+#add-shortcut:hover {
     background: #303030;
-} */
+}
+
+/* Style the copy and delete buttons separately */
+.copy-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 #app {
-    width: 320px;
+    width: 311px;
     padding: 15px;
     background: #181818;
     color: #ffffff;
@@ -51,7 +61,7 @@ html, body {
 }
 
 #search, #shortcut-name, #shortcut-url {
-    width: 91%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
@@ -69,6 +79,7 @@ html, body {
     padding: 10px;
     border-radius: 6px;
     background: #202020;
+    width: 93%;
 }
 
 /* Shortcut item (Clickable) */
