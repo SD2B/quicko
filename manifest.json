@@ -23,6 +23,12 @@
               "default": "Alt+Q"
           },
           "description": "Open the Quicko extension"
-      }
+      },
+      "open-clipboard": {
+        "suggested_key": {
+            "default": "Alt+C"
+        },
+        "description": "Open secondary popup"
+    }
   }
 }
