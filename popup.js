@@ -53,13 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // Copy URL to clipboard
       document.querySelectorAll(".copy-btn").forEach((btn) => {
         btn.addEventListener("click", (e) => {
-          e.stopPropagation(); // Prevent tile click
+          e.stopPropagation();
           const url = e.target.dataset.url;
           navigator.clipboard.writeText(url).then(() => {
-            alert("Copied to clipboard!");
+            const originalText = e.target.textContent;
+            e.target.textContent = "✔ Copied!";
+            setTimeout(() => (e.target.textContent = originalText), 1000);
           });
         });
       });
+      
   
       // Delete shortcut
       document.querySelectorAll(".delete-btn").forEach((btn) => {

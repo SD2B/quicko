@@ -14,7 +14,118 @@
         </div>
         <input type="text" id="search" placeholder="Search...">
         
+        <!-- Display clipboard contents -->
+        <div id="clipboard-contents"></div>
+        <br>
+        <!-- Add content to clipboard -->
+        <div id="clipboard-input">
+            <input type="text" id="clipboard-title" placeholder="Enter title (optional)...">
+            <input type="text" id="clipboard-text" placeholder="Enter text to copy...">
+            <button id="copy-btn">Add</button>
+        </div>
     </div>
     <script src="clipboard_popup.js"></script>
 </body>
 </html>
+
+<style>
+    .clipboard-item {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 5px 0;
+        border-radius: 5px;
+        background: #121212;
+    }
+    .clipboard-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline-block;
+    }
+    .clipboard-title::after {
+        content: attr(data-title);
+        display: block;
+        max-width: 20ch;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .clipboard-text {
+        word-break: break-word;
+        margin-bottom: 5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .clipboard-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    .clipboard-buttons button {
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #232323;
+        color: white;
+        width: 30%;
+    }
+    
+    /* Updated TextField Styling */
+    #clipboard-title, #clipboard-text {
+        width: 93%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #ffffff;
+        background: #232323;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        outline: none;
+    }
+
+    /* Add Button Styling */
+    #copy-btn, .copy-btn, .edit-btn {
+        background: #232323;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Scrollable clipboard contents */
+    #clipboard-contents {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    /* Delete button with trash icon */
+    .delete-btn {
+        background: #232323;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .delete-btn::before {
+        content: '\1F5D1'; /* Unicode for delete/trash icon */
+        font-size: 16px;
+        margin-right: 5px;
+    }
+</style>

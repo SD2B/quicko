@@ -30,7 +30,7 @@ html, body {
     overflow: hidden;
 }
 /* This affects only the "Add Shortcut" button */
-#add-shortcut {
+#add-shortcut, #add-content {
     background: #232323;
     color: white;
     padding: 10px 15px;
@@ -39,7 +39,7 @@ html, body {
     cursor: pointer;
     width: 100%;
 }
-#add-shortcut:hover {
+#add-shortcut:hover, #add-content:hover {
     background: #303030;
 }
 
